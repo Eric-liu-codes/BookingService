@@ -86,19 +86,4 @@ public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
     public T getEntityById(long id) throws SQLException, InterruptedException {
         return null;
     }
-
-    @Override
-    public boolean updateEntity(T entity) {
-        return false;
-    }
-
-    @Override
-    public T createEntity(T entity) {
-        return null;
-    }
-
-    @Override
-    public void removeEntity(long id) {
-
-    }
 }

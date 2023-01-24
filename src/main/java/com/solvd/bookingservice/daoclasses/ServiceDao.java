@@ -14,22 +14,6 @@ public class ServiceDao extends MySQLDAO implements IServiceDao {
     public Object getEntityById(long id) throws SQLException, InterruptedException {
         return null;
     }
-
-    @Override
-    public boolean updateEntity(Object entity) {
-        return false;
-    }
-
-    @Override
-    public Object createEntity(Object entity) {
-        return null;
-    }
-
-    @Override
-    public void removeEntity(long id) {
-
-    }
-
     @Override
     public List getServices() throws SQLException, InterruptedException {
         return null;
