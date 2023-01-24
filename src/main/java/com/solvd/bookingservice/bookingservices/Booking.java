@@ -2,7 +2,6 @@ package com.solvd.bookingservice.bookingservices;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.sql.Timestamp;
 
 public class Booking {
     private long bookingID;
@@ -10,12 +9,12 @@ public class Booking {
     private String price;
     private String type;
     private Date date;
-    private Timestamp time;
+    private Time time;
     private long consumerID;
     private long cancellationID;
     private long frontDeskID;
 
-    public Booking(long bookingID, String name, String price, String type, Date date, Timestamp time, long consumerID, long cancellationID, long frontDeskID) {
+    public Booking(long bookingID, String name, String price, String type, Date date, Time time, long consumerID, long cancellationID, long frontDeskID) {
         this.bookingID = bookingID;
         this.name = name;
         this.price = price;
@@ -69,7 +68,7 @@ public class Booking {
         this.date = date;
     }
 
-    public Timestamp getTime() {
+    public Time getTime() {
         return time;
     }
 
