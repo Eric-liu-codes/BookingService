@@ -22,7 +22,7 @@ public class ConnectionPool {
     private ConnectionPool() throws InterruptedException {
         try {
             Properties prop = new Properties();
-            prop.load(new FileInputStream("C:\\Users\\House Games\\eclipse-workspace\\deliveryService\\src\\main\\resources\\properties\\config.properties"));
+            prop.load(new FileInputStream("C:\\Users\\BookingService\\src\\main\\resources\\properties\\config.properties"));
             url = prop.getProperty("db.url");
             username = prop.getProperty("db.username");
             password = prop.getProperty("db.password");
