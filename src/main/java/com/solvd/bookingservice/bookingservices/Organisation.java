@@ -1,4 +1,4 @@
-package com.solvd.bookingservice.users;
+package com.solvd.bookingservice.bookingservices;
 
 public class Organisation {
     private long organisationID;

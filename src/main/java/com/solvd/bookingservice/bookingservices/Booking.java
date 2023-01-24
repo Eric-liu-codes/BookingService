@@ -1,6 +1,7 @@
-package com.solvd.bookingservice.services;
+package com.solvd.bookingservice.bookingservices;
 
 import java.sql.Date;
+import java.sql.Time;
 import java.sql.Timestamp;
 
 public class Booking {
@@ -25,6 +26,8 @@ public class Booking {
         this.cancellationID = cancellationID;
         this.frontDeskID = frontDeskID;
     }
+
+    public Booking() {}
 
     public long getBookingID() {
         return bookingID;
@@ -70,7 +73,7 @@ public class Booking {
         return time;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(Time time) {
         this.time = time;
     }
 

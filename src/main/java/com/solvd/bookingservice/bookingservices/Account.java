@@ -1,5 +1,5 @@
-package com.solvd.bookingservice.services;
-
+package com.solvd.bookingservice.bookingservices;
+import java.util.Date;
 public class Account {
     private long accountID;
     private String username;
@@ -12,6 +12,8 @@ public class Account {
         this.password = password;
         this.organisationID = organisationID;
     }
+
+    public Account() {}
 
     public long getAccountID() {
         return accountID;
@@ -43,5 +45,9 @@ public class Account {
 
     public void setOrganisationID(long organisationID) {
         this.organisationID = organisationID;
+    }
+
+    public void setRegistrationDate(Date date) {
+
     }
 }

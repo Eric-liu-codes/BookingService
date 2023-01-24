@@ -1,4 +1,4 @@
-package com.solvd.bookingservice.services;
+package com.solvd.bookingservice.bookingservices;
 
 import java.sql.Date;
 import java.sql.Timestamp;

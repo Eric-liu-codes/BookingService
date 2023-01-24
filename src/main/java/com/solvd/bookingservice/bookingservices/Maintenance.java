@@ -1,22 +1,22 @@
-package com.solvd.bookingservice.services;
+package com.solvd.bookingservice.bookingservices;
 
-public class Cancellation {
-    private long cancellationID;
+public class Maintenance {
+    private long maintenanceID;
     private String type;
     private String reason;
 
-    public Cancellation(long cancellationID, String type, String reason) {
-        this.cancellationID = cancellationID;
+    public Maintenance(long maintenanceID, String type, String reason) {
+        this.maintenanceID = maintenanceID;
         this.type = type;
         this.reason = reason;
     }
 
-    public long getCancellationID() {
-        return cancellationID;
+    public long getMaintenanceID() {
+        return maintenanceID;
     }
 
-    public void setCancellationID(long cancellationID) {
-        this.cancellationID = cancellationID;
+    public void setMaintenanceID(long maintenanceID) {
+        this.maintenanceID = maintenanceID;
     }
 
     public String getType() {

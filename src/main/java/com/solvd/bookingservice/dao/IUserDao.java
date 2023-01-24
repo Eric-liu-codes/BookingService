@@ -1,10 +1,7 @@
 package com.solvd.bookingservice.dao;
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserDao<T> {
-    List<T> getAllUsers();
-    T getUserByID(long id);
-    void createUser(T account);
-    void updateUser(T account);
-    void deleteUser(T account);
+    List<T> getAllUsers() throws SQLException, InterruptedException;
 }

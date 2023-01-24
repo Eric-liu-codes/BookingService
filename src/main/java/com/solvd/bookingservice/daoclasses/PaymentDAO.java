@@ -1,11 +1,14 @@
-package com.solvd.bookingservice.dao.daoclasses;
+package com.solvd.bookingservice.daoclasses;
 
+import com.solvd.bookingservice.Runner;
 import com.solvd.bookingservice.dao.IPaymentDao;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class PaymentDAO extends MySQLDAO implements IPaymentDao {
+    static Logger logger = Logger.getLogger(Runner.class.getName());
     @Override
     public Object getEntityById(long id) throws SQLException {
         return null;
@@ -29,25 +32,5 @@ public class PaymentDAO extends MySQLDAO implements IPaymentDao {
     @Override
     public List getAllPayments() {
         return null;
-    }
-
-    @Override
-    public Object getPaymentByID(long id) {
-        return null;
-    }
-
-    @Override
-    public void createPayment(Object account) {
-
-    }
-
-    @Override
-    public void updatePayment(Object account) {
-
-    }
-
-    @Override
-    public void deletePayment(Object account) {
-
     }
 }

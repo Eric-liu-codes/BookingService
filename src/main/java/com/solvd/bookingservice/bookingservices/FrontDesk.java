@@ -1,4 +1,4 @@
-package com.solvd.bookingservice.services;
+package com.solvd.bookingservice.bookingservices;
 
 public class FrontDesk {
     private long frontDeskID;

@@ -1,4 +1,8 @@
 package com.solvd.bookingservice.dao;
 
-public interface IServiceDao {
+import java.sql.SQLException;
+import java.util.List;
+
+public interface IServiceDao<T> {
+    List<T> getServices() throws SQLException, InterruptedException;
 }

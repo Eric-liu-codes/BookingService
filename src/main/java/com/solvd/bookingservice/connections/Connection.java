@@ -6,9 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Logger;
 
 public class Connection {
-    private static Logger logger = LogManager.getLogger(Runner.class.getName());
+    static Logger logger = Logger.getLogger(Runner.class.getName());
 
     private java.sql.Connection connection;
 
@@ -28,7 +29,7 @@ public class Connection {
                 logger.info("ID: " + id);
             }
         } catch (SQLException e) {
-            logger.error(e);
+            logger.info("Connection Error");
         }
     }
 
@@ -36,7 +37,7 @@ public class Connection {
         try {
             connection.close();
         } catch (SQLException e) {
-            logger.error(e);
+            logger.info("Connection Error");
         }
     }
 }
