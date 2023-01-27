@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "accountID": 123,
+      "username": "ericliu",
+      "password": "liu123",
+      "organisationID": 111
+    },
+    {
+      "accountID": 212,
+      "username": "bobbyliu",
+      "password": "bobby123",
+      "organisationID": 222
+    },
+    {
+      "accountID": 321,
+      "username": "johncena",
+      "password": "cena123",
+      "organisationID": 333
+    }
+  ]
+}

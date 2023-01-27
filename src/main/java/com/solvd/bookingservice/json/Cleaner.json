@@ -1,0 +1,16 @@
+{
+  "cleaners": [
+    {
+      "cleanerID": 123,
+      "cleanService": "Daily"
+    },
+    {
+      "cleanerID": 222,
+      "cleanService": "Weekly"
+    },
+    {
+      "cleanerID": 321,
+      "cleanService": "Daily"
+    }
+  ]
+}

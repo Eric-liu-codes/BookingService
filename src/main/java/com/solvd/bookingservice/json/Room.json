@@ -1,0 +1,22 @@
+{
+  "rooms": [
+    {
+      "roomID": 111,
+      "roomNum": "101",
+      "type": "Single-Bedroom",
+      "bookingID": 123
+    },
+    {
+      "roomID": 222,
+      "roomNum": "102",
+      "type": "Double-Bedroom",
+      "bookingID": 222
+    },
+    {
+      "roomID": 333,
+      "roomNum": "103",
+      "type": "Presidential",
+      "bookingID": 321
+    }
+  ]
+}

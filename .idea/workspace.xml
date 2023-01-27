@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c123429-14b0-45c2-b2d6-62cdce7a4989" name="Changes" comment="Small fix">
+    <list default="true" id="9c123429-14b0-45c2-b2d6-62cdce7a4989" name="Changes" comment="Add additional features">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/json/Account.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/json/Cancellation.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/json/Cleaner.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/json/Payment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/json/Room.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Cancellation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Cancellation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Organisation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Organisation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/bookingservices/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IServiceDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/AccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/BookingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/CancellationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/CancellationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/OrganisationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/OrganisationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/PaymentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/RoomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/ServiceDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674562691015</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add additional features">
+      <created>1674799640115</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674799640115</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +136,7 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Implements majority" />
     <MESSAGE value="Small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
+    <MESSAGE value="Add additional features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add additional features" />
   </component>
 </project>

@@ -1,0 +1,19 @@
+{
+  "cancellations": [
+    {
+      "cancellationID": 123,
+      "type": "Full",
+      "reason": "Change of plans"
+    },
+    {
+      "cancellationID": 212,
+      "type": "Partial",
+      "reason": "Weather conditions"
+    },
+    {
+      "cancellationID": 321,
+      "type": "Full",
+      "reason": "Sickness"
+    }
+  ]
+}

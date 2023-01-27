@@ -13,8 +13,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Date;
 import java.util.logging.Logger;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Runner {
     static Logger logger = Logger.getLogger(Runner.class.getName());
@@ -44,6 +46,14 @@ public class Runner {
         Marshaller marshaller = context.createMarshaller();
         marshaller.marshal(account, new File("Account.xml"));
         marshaller.unmarshal(new FileReader("Account.xml"));
-        
+
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Account accountJackson = mapper.readValue(new File("Account.json"), Account.class);
+            logger.info(accountJackson.getName());
+        } catch (IOException e) {
+            logger.info("Exception caught");
+        }
+    }
     }
 }

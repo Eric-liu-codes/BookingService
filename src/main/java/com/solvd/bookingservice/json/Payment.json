@@ -1,0 +1,19 @@
+{
+  "paymentMethods": [
+    {
+      "paymentMethodID": 123,
+      "name": "Visa",
+      "type": "Credit"
+    },
+    {
+      "paymentMethodID": 222,
+      "name": "MasterCard",
+      "type": "Credit"
+    },
+    {
+      "paymentMethodID": 321,
+      "name": "PayPal",
+      "type": "Online"
+    }
+  ]
+}
