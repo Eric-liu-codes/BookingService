@@ -10,6 +10,7 @@ public class Payment {
         this.paymentMethodID = paymentMethodID;
         this.bookingID = bookingID;
     }
+    public Payment(){}
 
     public long getPaymentID() {
         return paymentID;

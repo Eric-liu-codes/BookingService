@@ -13,6 +13,9 @@ public class Organisation {
         this.location = location;
     }
 
+    public Organisation() {
+    }
+
     public long getOrganisationID() {
         return organisationID;
     }

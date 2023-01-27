@@ -33,7 +33,7 @@ public class BookingDAO extends MySQLDAO implements IBookingDao {
             book.setFrontDeskID(resultSet.getLong("front_id"));
             books.add(book);
         }
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
         return books;
     }
 
@@ -57,23 +57,49 @@ public class BookingDAO extends MySQLDAO implements IBookingDao {
             book.setType(resultSet.getString("type"));
             book.setFrontDeskID(resultSet.getLong("front_id"));
         }
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
         return book;
     }
 
-    @Override
     public void createBooking(Booking book) throws SQLException, InterruptedException {
-
+        String sql = "INSERT INTO Bookings (name, price, type, date, time, consumerID, frontDeskID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        Connection connection = (Connection) pool.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, book.getName());
+        statement.setString(2, book.getPrice());
+        statement.setString(3, book.getType());
+        statement.setDate(4, book.getDate());
+        statement.setTime(5, book.getTime());
+        statement.setLong(6, book.getConsumerID());
+        statement.setLong(7, book.getFrontDeskID());
+        statement.executeUpdate();
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
     }
 
     @Override
     public void updateBooking(Booking book) throws SQLException, InterruptedException {
-
+        String sql = "UPDATE Bookings SET name = ?, price = ?, type = ?, date = ?, time = ?, consumerID = ?, frontDeskID = ? WHERE bookingID = ?";
+        Connection connection = (Connection) pool.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, book.getName());
+        statement.setString(2, book.getPrice());
+        statement.setString(3, book.getType());
+        statement.setDate(4, book.getDate());
+        statement.setTime(5, book.getTime());
+        statement.setLong(6, book.getConsumerID());
+        statement.setLong(7, book.getFrontDeskID());
+        statement.setLong(8, book.getBookingID());
+        statement.executeUpdate();
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
     }
 
     @Override
     public void deleteBooking(Booking book) throws InterruptedException, SQLException {
-
+        String sql = "DELETE FROM Bookings WHERE bookingID = ?";
+        Connection connection = (Connection) pool.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setLong(1, book.getBookingID());
+        statement.executeUpdate();
     }
 
     @Override

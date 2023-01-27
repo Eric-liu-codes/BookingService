@@ -19,6 +19,9 @@ public class User {
         this.accountID = accountID;
     }
 
+    public User() {
+    }
+
     public long getEmployeeID() {
         return employeeID;
     }

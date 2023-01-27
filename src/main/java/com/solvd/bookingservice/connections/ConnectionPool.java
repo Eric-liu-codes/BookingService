@@ -58,6 +58,6 @@ public class ConnectionPool {
         return instance;
     }
 
-    public void releaseConnection(com.solvd.bookingservice.connections.Connection connection) {
+    public void releaseConnection(Connection connection) {
     }
 }

@@ -1,20 +1,52 @@
 package com.solvd.bookingservice.daoclasses;
 
-import com.solvd.bookingservice.Runner;
+import com.solvd.bookingservice.bookingservices.Room;
+import com.solvd.bookingservice.connections.ConnectionPool;
 import com.solvd.bookingservice.dao.IRoomDAO;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class RoomDAO extends MySQLDAO implements IRoomDAO {
-    static Logger logger = Logger.getLogger(Runner.class.getName());
+    private ConnectionPool pool;
     @Override
-    public Object getEntityById(long id) throws SQLException {
-        return null;
+    public Object getEntityById(long id) throws SQLException, InterruptedException {
+        String sql = "SELECT * FROM Rooms WHERE roomID = ?";
+        Connection connection = (Connection) pool.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setLong(1, id);
+        ResultSet resultSet = statement.executeQuery();
+        Room room = null;
+        if (resultSet.next()) {
+            room = new Room();
+            room.setRoomID(resultSet.getLong("roomID"));
+            room.setRoomNum(resultSet.getString("roomNum"));
+            room.setType(resultSet.getString("type"));
+            room.setBookingID(resultSet.getLong("bookingID"));
+        }
+        pool.getInstance().releaseConnection(connection);
+        return room;
     }
     @Override
-    public List getAllRooms() {
-        return null;
+    public List<Room> getAllRooms() throws InterruptedException, SQLException {
+        String sql = "SELECT * FROM Rooms";
+        Connection connection = (Connection) pool.getConnection();
+        PreparedStatement statement = connection.prepareStatement(sql);
+        ResultSet resultSet = statement.executeQuery();
+        List<Room> rooms = new ArrayList<>();
+        while (resultSet.next()) {
+            Room room = new Room();
+            room.setRoomID(resultSet.getLong("roomID"));
+            room.setRoomNum(resultSet.getString("roomNum"));
+            room.setType(resultSet.getString("type"));
+            room.setBookingID(resultSet.getLong("bookingID"));
+            rooms.add(room);
+        }
+        pool.getInstance().releaseConnection(connection);
+        return rooms;
     }
 }

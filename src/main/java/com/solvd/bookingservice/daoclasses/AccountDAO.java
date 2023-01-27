@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
     private ConnectionPool pool;
     @Override
@@ -28,7 +27,7 @@ public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
             account.setPassword(resultSet.getString("password"));
             accounts.add(account);
         }
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
         return accounts;
     }
 
@@ -46,7 +45,7 @@ public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
             account.setUsername(resultSet.getString("username"));
             account.setPassword(resultSet.getString("password"));
         }
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
         return account;
     }
 
@@ -58,7 +57,7 @@ public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
         statement.setString(1, account.getUsername());
         statement.setString(2, account.getPassword());
         statement.executeUpdate();
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
     }
 
     @Override
@@ -70,7 +69,7 @@ public class AccountDAO<T> extends MySQLDAO<T> implements IAccountDao {
         statement.setString(2, account.getPassword());
         statement.setLong(3, account.getAccountID());
         statement.executeUpdate();
-        pool.getInstance().releaseConnection(connection);
+        pool.getInstance().releaseConnection((java.sql.Connection) connection);
     }
 
     @Override

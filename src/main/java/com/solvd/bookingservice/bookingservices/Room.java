@@ -13,6 +13,9 @@ public class Room {
         this.bookingID = bookingID;
     }
 
+    public Room() {
+    }
+
     public long getRoomID() {
         return roomID;
     }

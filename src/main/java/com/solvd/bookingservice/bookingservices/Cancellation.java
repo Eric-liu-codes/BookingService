@@ -11,6 +11,9 @@ public class Cancellation {
         this.reason = reason;
     }
 
+    public Cancellation() {
+    }
+
     public long getCancellationID() {
         return cancellationID;
     }
