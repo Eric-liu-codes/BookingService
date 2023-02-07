@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Organisation>
+    <organisationID>100</organisationID>
+    <name>Acme Inc.</name>
+    <type>Corporation</type>
+    <location>New York, NY</location>
+</Organisation>

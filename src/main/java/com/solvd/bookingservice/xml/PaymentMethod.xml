@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<PaymentMethod>
-    <paymentMethodID>54321</paymentMethodID>
-    <name>Visa</name>
-    <type>Credit</type>
-</PaymentMethod>

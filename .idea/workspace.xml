@@ -5,8 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c123429-14b0-45c2-b2d6-62cdce7a4989" name="Changes" comment="Added Json and Parse it with Jackson">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/AccountBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/BookingBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/CancellationBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/OrganisationBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/PaymentBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/mybatis/RoomBatis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/schema/Account.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/schema/Cancellation.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/schema/Cleaner.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/schema/PaymentMethod.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/schema/Room.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/BookingServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/CancellationServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/OrganisationServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/PaymentServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/services/RoomServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Organisation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/connections/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IAccountDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IAccountDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IBaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IBaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IBookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/dao/IBookingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/AccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/AccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/BookingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/BookingDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/CancellationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/CancellationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/OrganisationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/OrganisationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/PaymentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/PaymentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/daoclasses/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Cancellation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Cancellation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Cleaner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Cleaner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/PaymentMethod.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Room.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solvd/bookingservice/xml/Room.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +54,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>

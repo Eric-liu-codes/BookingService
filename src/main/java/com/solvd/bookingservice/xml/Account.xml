@@ -4,4 +4,13 @@
     <username>ericliu</username>
     <password>liu123</password>
     <organisationID>445566</organisationID>
+    <date>2021-05-12</date>
+    <time>10:00 AM</time>
+    <payment>
+        <PaymentMethod>
+            <paymentMethodID>1</paymentMethodID>
+            <name>Visa</name>
+            <type>Credit</type>
+        </PaymentMethod>
+    </payment>
 </Account>

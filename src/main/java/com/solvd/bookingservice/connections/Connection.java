@@ -1,12 +1,13 @@
 package com.solvd.bookingservice.connections;
 
 import com.solvd.bookingservice.Runner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.*;
-import java.util.logging.Logger;
 
 public class Connection {
-    static Logger logger = Logger.getLogger(Runner.class.getName());
+    private static Logger logger = LogManager.getLogger(Runner.class.getName());
 
     private java.sql.Connection connection;
 
@@ -29,7 +30,7 @@ public class Connection {
             statement.close();
             resultSet.close();
         } catch (SQLException e) {
-            logger.info("Connection Error");
+            logger.error("Connection Error");
         }
     }
 
@@ -37,7 +38,7 @@ public class Connection {
         try {
             connection.close();
         } catch (SQLException e) {
-            logger.info("Connection Error");
+            logger.error("Connection Error");
         }
     }
 }

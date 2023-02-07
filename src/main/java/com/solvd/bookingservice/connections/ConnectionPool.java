@@ -1,6 +1,8 @@
 package com.solvd.bookingservice.connections;
 
 import com.solvd.bookingservice.Runner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,10 +11,9 @@ import java.sql.Connection;
 import java.sql.*;
 import java.util.Properties;
 import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.Logger;
 
 public class ConnectionPool {
-    static Logger logger = Logger.getLogger(Runner.class.getName());
+    private static Logger logger = LogManager.getLogger(Runner.class.getName());
     private static ConnectionPool instance;
     private LinkedBlockingQueue<Connection> availableConnections;
     private String url;
@@ -32,9 +33,9 @@ public class ConnectionPool {
                 availableConnections.add(connection);
             }
         } catch (FileNotFoundException e) {
-            logger.info("File not found");
+            logger.error("File not found");
         } catch (IOException e) {
-            logger.info("Runtime error");
+            logger.error("Runtime error");
         }
         this.availableConnections = availableConnections;
     }

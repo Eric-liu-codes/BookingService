@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Cancellation>
-    <cancellationID>12345</cancellationID>
-    <type>Refund</type>
-    <reason>Changed plans</reason>
+    <cancellationID>1</cancellationID>
+    <type>Full</type>
+    <reason>Unsatisfactory service</reason>
 </Cancellation>

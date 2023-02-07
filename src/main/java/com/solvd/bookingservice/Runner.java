@@ -2,9 +2,12 @@ package com.solvd.bookingservice;
 
 
 import com.solvd.bookingservice.bookingservices.Account;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
@@ -12,15 +15,14 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
-import java.util.logging.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Runner {
-    static Logger logger = Logger.getLogger(Runner.class.getName());
-    public static void main(String[] args) throws FileNotFoundException {
+    private static Logger logger = LogManager.getLogger(Runner.class.getName());
+    public static void main(String[] args) throws FileNotFoundException, JAXBException {
         //Parse using DOM
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -32,7 +34,7 @@ public class Runner {
             logger.info("Password: " + node.getAttributes().getNamedItem("password").getTextContent());
             logger.info("Organisation ID: " + node.getAttributes().getNamedItem("organisationID").getTextContent());
         } catch (Exception e) {
-            logger.info("Exception caught");
+            logger.error("Exception caught");
         }
 
         Account account = new Account();
@@ -42,18 +44,28 @@ public class Runner {
         account.setOrganisationID(123);
         account.setRegistrationDate(new Date());
 
-        JAXBContext context = JAXBContext.newInstance(Account.class);
-        Marshaller marshaller = context.createMarshaller();
-        marshaller.marshal(account, new File("Account.xml"));
-        marshaller.unmarshal(new FileReader("Account.xml"));
+        try {
+            JAXBContext context = JAXBContext.newInstance(Account.class);
+            Marshaller marshaller = context.createMarshaller();
+            marshaller.marshal(account, new File("Account.xml"));
+
+            Unmarshaller jaxbUnmarshaller = context.createUnmarshaller();
+            Account accounts = (Account) jaxbUnmarshaller.unmarshal(new File("Account.xml"));
+
+            System.out.println("Account ID: " + accounts.getAccountID());
+            System.out.println("Username: " + accounts.getUsername());
+            System.out.println("Password: " + accounts.getPassword());
+            System.out.println("Organisation ID: " + accounts.getOrganisationID());
+        } catch (JAXBException e) {
+            logger.error("JAXB Exception");
+        }
 
         ObjectMapper mapper = new ObjectMapper();
         try {
             Account accountJackson = mapper.readValue(new File("Account.json"), Account.class);
-            logger.info(accountJackson.getName());
+            logger.info(String.valueOf(accountJackson.getAccountID()));
         } catch (IOException e) {
-            logger.info("Exception caught");
+            logger.error("Exception caught");
         }
-    }
     }
 }

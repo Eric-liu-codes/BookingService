@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Room>
-    <roomID>2468</roomID>
+    <roomID>123</roomID>
     <roomNum>101</roomNum>
-    <type>2-Bedroom</type>
-    <bookingID>0123</bookingID>
+    <type>Standard</type>
+    <bookingID>12345</bookingID>
 </Room>
